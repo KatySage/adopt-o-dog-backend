@@ -1,0 +1,32 @@
+{
+  "name": "salon",
+  "version": "1.0.0",
+  "description": "an app for reviewing and critiquing artwork",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon ./app.js",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "keywords": [],
+  "author": "Katy Sage, Tait A-Meglasson, Chris Owens, Justin Gardner",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-es6-template-engine": "^2.2.3",
+    "express-session": "^1.17.1",
+    "helmet": "^4.1.1",
+    "http-parser-js": "^0.5.2",
+    "materialize-css": "^1.0.0-rc.2",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1",
+    "node-sass": "^4.14.1",
+    "pg-promise": "^10.6.1",
+    "popper": "^1.0.1",
+    "session-file-store": "^1.4.0"
+  }
+}
