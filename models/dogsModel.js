@@ -14,7 +14,7 @@ class DogsList {
   static async showAllDogs() {
     try {
       const response = await db.any(
-        `SELECT id, breed, name, breed_id FROM dogs;`
+        `SELECT * FROM dogs;`
       );
       return response;
     } catch (error) {
@@ -24,7 +24,7 @@ class DogsList {
   }
   static async showDog(id) {
     try {
-      const response = await db.result(
+      const response = await db.one(
         `SELECT * from dogs WHERE id = $1;`, [id]
       );
       return response;
@@ -32,5 +32,6 @@ class DogsList {
       console.error("ERROR: ", error.message);
       return error.message;
     }
-}}
+}
+}
 module.exports = DogsList;

@@ -23,7 +23,7 @@ class CommentsList {
   static async addComment(comment_text, title, date, dog_id) {
     try {
       const response = await db.result(
-        `INSERT INTO reviews (comment_text, title, date, dog_id) VALUES ($1, $2, $3, $4);`,
+        `INSERT INTO comments (comment_text, title, date, dog_id) VALUES ($1, $2, $3, $4);`,
         [comment_text, title, date, dog_id]
       );
       return response;
